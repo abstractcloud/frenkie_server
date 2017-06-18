@@ -22,9 +22,7 @@
         $(function() {
             var socket = io();
             $('.control').click(function() {
-                socket.emit('control', {
-                    go: $(this).data('event')
-                });
+                socket.emit('control', $(this).data('event'));
             });
             
             socket.on('stop', function (msg) {
