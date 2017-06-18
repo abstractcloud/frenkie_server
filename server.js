@@ -14,8 +14,8 @@ io.on('connection', function (socket) {
     });
 
     socket.on('control', function (control) {
-        console.log('control: ' + control);
-        io.emit(control, "go to " + control);
+        console.log('control: ' + control.go);
+        io.emit("drive", control.drive);
     });
     
     socket.on('status', function (status) {
