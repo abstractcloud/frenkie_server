@@ -8,15 +8,54 @@
 
 <body>
     <h3>Dashboard</h3>
-    <button class="test">Test Send Status</button>
+    <button class="control" data-event="stop">STOP</button>
+    <button class="control" data-event="forward">Forward</button>
+    <button class="control" data-event="back">Back</button>
+    <button class="control" data-event="left">Left</button>
+    <button class="control" data-event="right">Right</button>
+    <button class="control" data-event="auto">Auto</button>
+    <div class="status"></div>
+    <div class="log"></div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
         $(function() {
             var socket = io();
-            $('.test').click(function() {
-                socket.emit('status', "ok");
+            $('.control').click(function() {
+                socket.emit('control', {
+                    go: $(this).data('event');
+                });
             });
+            
+            socket.on('stop', function (msg) {
+                $('.log').html(msg);
+            });
+            
+            socket.on('forward', function (msg) {
+                $('.log').html(msg);
+            });
+            
+            socket.on('back', function (msg) {
+                $('.log').html(msg);
+            });
+            
+            socket.on('left', function (msg) {
+                $('.log').html(msg);
+            });
+            
+            socket.on('right', function (msg) {
+                $('.log').html(msg);
+            });
+            
+            socket.on('auto', function (msg) {
+                $('.log').html(msg);
+            });
+            
+            socket.on('status', function (status) {
+                $('.status').append('<p>' + status + '</p>');
+            });
+            
+            
         });
     </script>
 </body>

@@ -13,8 +13,14 @@ io.on('connection', function (socket) {
         console.log('Frenkie disconnected');
     });
 
+    socket.on('control', function (control) {
+        console.log('control: ' + control);
+        io.emit(control, "go to " + control);
+    });
+    
     socket.on('status', function (status) {
         console.log('status: ' + status);
+        io.emit('status', status);
     });
 });
 
