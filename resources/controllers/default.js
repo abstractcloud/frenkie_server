@@ -41,7 +41,7 @@
             },
         };
 
-        $scope.value3 = 5.4;
+        $scope.value3 = 3.4;
         $scope.options3 = {
             skin: {
                 type: 'tron',
@@ -56,5 +56,54 @@
             step: 0.1,
             max: 10
         };
+
+        $scope.data = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [
+                {
+                    fillColor: 'rgba(92, 184, 92, 0.5)',
+                    strokeColor: 'rgba(92, 184, 92, 0.7)',
+                    highlightFill: 'rgba(92, 215, 92, 0.7)',
+                    highlightStroke: 'rgba(92, 184, 92, 0.7)',
+                    data: [65, 59, 80, 81, 56, 55, 40, 33, 22, 33, 55, 45]
+                },
+                {
+                    fillColor: 'rgba(217 ,83 ,79, 0.5)',
+                    strokeColor: 'rgba(217 ,83 ,79, 0.8)',
+                    highlightFill: 'rgba(250 ,83 ,79, 0.8)',
+                    highlightStroke: 'rgba(217 ,83 ,79, 0.8)',
+                    data: [12, 12, 10, 12, 24, 12, 16, 12, 12, 13, 22, 13]
+                }
+            ]
+        };
+        
+        $scope.drive = function (go, drive) {
+            console.log(go, drive);
+            socket.emit('control', {
+                go: go,
+                drive: drive
+            });
+        }
+        
+        $(document).keydown(function (e) {
+            console.log(e.keyCode);
+            switch(e.keyCode){
+                case 38 : $scope.drive('forward', 'U');
+                break;
+                    
+                case 40 : $scope.drive('back', 'D');
+                break;
+                    
+                case 37 : $scope.drive('left', 'L');
+                break;
+                    
+                case 39 : $scope.drive('right', 'R');
+                break;
+                    
+                case 32 : $scope.drive('stop', 'S');
+                break;
+            }
+        });
+        
     })
 })();

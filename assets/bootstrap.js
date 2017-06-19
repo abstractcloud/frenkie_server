@@ -16,5 +16,5 @@ import "./css/main.css";
     require('angular-material');
     require('../bower_components/d3/d3.js');
     require('../bower_components/ng-knob/dist/ng-knob.js');
-    require('chart.js');
+    require('tc-angular-chartjs');
 })();

@@ -124,3 +124,8 @@ md-grid-tile {
 .el-nav:hover > i {
     color: dodgerblue;
 }
+
+.nav-sidebar a > i {
+    font-size: 16px;
+    margin-right: 12px;
+}

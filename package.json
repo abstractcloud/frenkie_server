@@ -21,7 +21,8 @@
     "express": "^4.15.2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
-    "socket.io": "^2.0.3"
+    "socket.io": "^2.0.3",
+    "tc-angular-chartjs": "^2.1.4"
   },
   "devDependencies": {
     "css-loader": "^0.28.4",
