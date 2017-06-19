@@ -1,0 +1,20 @@
+{
+  "name": "frenkie",
+  "description": "robot mr. Frenkie",
+  "main": "server.js",
+  "authors": [
+    "Vladimir"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/abstractcloud/frenkie_server",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ng-knob": "^0.1.3"
+  }
+}

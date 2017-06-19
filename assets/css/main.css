@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+body {
+    background-color: #222c32;
+    color: #FFF;
+}
+
+a {
+    color: rgba(255, 255, 255, .65);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+md-grid-list {
+    margin: 8px;
+}
+
+.dark {
+    background: #2b343a;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+md-grid-tile {
+    transition: all 400ms ease-out 50ms;
+}
+
+.sidebar {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        width: 270px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: #2b343a;
+    }
+}
+
+
+/* Sidebar navigation */
+
+.nav-sidebar {
+    margin-right: -21px;
+    /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+
+.nav-sidebar>li>a {
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.nav-sidebar>.active>a,
+.nav-sidebar>.active>a:hover,
+.nav-sidebar>.active>a:focus {
+    color: #fff;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding-right: 40px;
+        padding-left: 40px;
+        margin-left: 270px;
+    }
+}
+
+.main .page-header {
+    margin-top: 0;
+}
+
+.media {
+    padding: 40px;
+}
+
+.media-object {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.el {
+    height: 100px;
+    padding: 30px;
+}
+
+.el i {
+    font-size: 40px;
+    color: #D8DADA;
+}
+
+.el-nav {
+    cursor: pointer;
+}
+
+.el-nav:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.el-nav:hover > i {
+    color: dodgerblue;
+}
