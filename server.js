@@ -22,9 +22,14 @@ io.on('connection', function (socket) {
         io.emit("drive", control.drive);
     });
     
-    socket.on('status', function (status) {
+    socket.on('command', function (command) {
+        console.log('command: ' + command.command);
+        io.emit("commandcontrol", command.command);
+    });
+    
+    socket.on('statuslog', function (status) {
         console.log('status: ' + status);
-        io.emit('status', status);
+        io.emit('log', status);
     });
 });
 

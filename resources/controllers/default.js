@@ -88,19 +88,29 @@
         $(document).keydown(function (e) {
             console.log(e.keyCode);
             switch(e.keyCode){
-                case 38 : $scope.drive('forward', 'U');
+                case 38 : 
+                    $('.route-forward').css('color', 'dodgerblue');
+                    $scope.drive('forward', 'U');
                 break;
                     
-                case 40 : $scope.drive('back', 'D');
+                case 40 :
+                    $('.route-back').css('color', 'dodgerblue');
+                    $scope.drive('back', 'D');
                 break;
                     
-                case 37 : $scope.drive('left', 'L');
+                case 37 : 
+                    $('.route-left').css('color', 'dodgerblue');
+                    $scope.drive('left', 'L');
                 break;
                     
-                case 39 : $scope.drive('right', 'R');
+                case 39 : 
+                    $('.route-right').css('color', 'dodgerblue');
+                    $scope.drive('right', 'R');
                 break;
                     
-                case 32 : $scope.drive('stop', 'S');
+                case 32 : 
+                    $('.route-stop').css('color', 'dodgerblue');
+                    $scope.drive('stop', 'S');
                 break;
             }
         });

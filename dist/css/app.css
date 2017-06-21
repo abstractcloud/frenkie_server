@@ -27334,22 +27334,23 @@ md-grid-tile {
 
 .el i {
     font-size: 40px;
-    color: #D8DADA;
+    color: rgba(84, 150, 150, 0.3);
 }
 
 .el-nav {
     cursor: pointer;
 }
 
-.el-nav:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.el-nav:hover > i {
+.el-nav:hover > i,
+.el-nav:focus > i {
     color: dodgerblue;
 }
 
 .nav-sidebar a > i {
     font-size: 16px;
     margin-right: 12px;
+}
+
+:focus {
+    outline: 0;
 }
