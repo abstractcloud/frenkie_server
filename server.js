@@ -29,7 +29,7 @@ io.on('connection', function (socket) {
     
     socket.on('statuslog', function (status) {
         console.log('status: ' + status);
-        io.emit('log', status);
+        io.emit('logs', status);
     });
 });
 
