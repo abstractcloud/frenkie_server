@@ -14,6 +14,7 @@
         }
         
         socket.on('logs', function (logs) {
+            console.log(logs);
             $scope.logs.push(logs);
         });
     })
