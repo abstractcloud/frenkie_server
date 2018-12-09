@@ -27357,51 +27357,54 @@ md-grid-tile {
 
 .controll-wrapper {
     position: relative;
-    margin-bottom: 250px;
 }
 
-.controll-wrapper > div {
+.statistic-wrapp {
+    position: relative;
+}
+
+.controlls > div {
     position: absolute;
 }
 
 .btn-a {
-    top: 10px;
+    top: 0px;
     width: 60px;
     left: 0;
 }
 
 .btn-u {
-    top: 10px;
-    width: 60px;
-    left: 60px;
-}
-
-.btn-m {
-    top: 10px;
+    top: 0px;
     width: 60px;
     left: 120px;
 }
 
+.btn-m {
+    top: 0px;
+    width: 60px;
+    left: 240px;
+}
+
 .btn-l {
-    top: 70px;
+    top: 120px;
     width: 60px;
     left: 0px;
 }
 
 .btn-s {
-    top: 70px;
-    width: 60px;
-    left: 60px;
-}
-
-.btn-r {
-    top: 70px;
+    top: 120px;
     width: 60px;
     left: 120px;
 }
 
-.btn-d {
-    top: 130px;
+.btn-r {
+    top: 120px;
     width: 60px;
-    left: 60px;
+    left: 240px;
+}
+
+.btn-d {
+    top: 240px;
+    width: 60px;
+    left: 120px;
 }
