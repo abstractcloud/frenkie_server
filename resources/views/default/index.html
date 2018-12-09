@@ -1,55 +1,44 @@
-<md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px">
-
-    <md-grid-tile class="dark" md-rowspan="2" md-colspan="2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 el el-nav" ng-click="drive('auto', 'A')">
-                    <i class="fa fa-microchip"></i>
-                </div>
-                <div class="col-md-4 el el-nav" ng-click="drive('forward', 'U')">
-                    <i class="fa fa-chevron-up route-forward"></i>
-                </div>
-                <div class="col-md-4 el el-nav" ng-click="drive('manual', 'M')">
-                    <i class="fa fa-hand-paper-o"></i>
-                </div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="controll-wrapper">
+            <div class="btn-a el el-nav" ng-click="drive('auto', 'A')">
+                <i class="fa fa-microchip"></i>
             </div>
-            <div class="row">
-                <div class="col-md-4 el el-nav" ng-click="drive('left', 'L')">
-                    <i class="fa fa-chevron-left route-left"></i>
-                </div>
-                <div class="col-md-4 el el-nav" ng-click="drive('stop', 'S')">
-                    <i class="fa fa-stop route-stop"></i>
-                </div>
-                <div class="col-md-4 el el-nav" ng-click="drive('right', 'R')">
-                    <i class="fa fa-chevron-right route-right"></i>
-                </div>
+            <div class="btn-u el el-nav" ng-click="drive('forward', 'U')">
+                <i class="fa fa-chevron-up route-forward"></i>
             </div>
-            <div class="row">
-                <div class="col-md-4 el"></div>
-                <div class="col-md-4 el el-nav" ng-click="drive('back', 'D')">
-                    <i class="fa fa-chevron-down route-back"></i>
-                </div>
-                <div class="col-md-4 el"></div>
+            <div class="btn-m el el-nav" ng-click="drive('manual', 'M')">
+                <i class="fa fa-hand-paper-o"></i>
+            </div>
+            <div class="btn-l el el-nav" ng-click="drive('left', 'L')">
+                <i class="fa fa-chevron-left route-left"></i>
+            </div>
+            <div class="btn-s el el-nav" ng-click="drive('stop', 'S')">
+                <i class="fa fa-stop route-stop"></i>
+            </div>
+            <div class="btn-r el el-nav" ng-click="drive('right', 'R')">
+                <i class="fa fa-chevron-right route-right"></i>
+            </div>
+            <div class="btn-d el el-nav" ng-click="drive('back', 'D')">
+                <i class="fa fa-chevron-down route-back"></i>
             </div>
         </div>
-    </md-grid-tile>
-   
-    <md-grid-tile class="dark" md-rowspan="2" md-colspan="4">
-        <div class="container">
+    </div>
+</div>
+    <div class="row">
+        <div class="col-md-12">
             <canvas tc-chartjs-line chart-data="data"></canvas>
         </div>
-    </md-grid-tile>
-
-    <md-grid-tile class="dark" md-rowspan="2" md-colspan="2">
-        <ui-knob value="value" options="options"></ui-knob>
-    </md-grid-tile>
-
-    <md-grid-tile class="dark" md-rowspan="2" md-colspan="2">
-        <ui-knob value="value2" options="options2"></ui-knob>
-    </md-grid-tile>
+    </div>
     
-    <md-grid-tile class="dark" md-rowspan="2" md-colspan="2">
-        <ui-knob value="value3" options="options3"></ui-knob>
-    </md-grid-tile>
-
-</md-grid-list>
+    <div class="row">
+        <div class="col-md-4">
+            <ui-knob value="value" options="options"></ui-knob>
+        </div>
+        <div class="col-md-4">
+            <ui-knob value="value2" options="options2"></ui-knob>
+        </div>
+        <div class="col-md-4">
+            <ui-knob value="value2" options="options3"></ui-knob>
+        </div>
+    </div>

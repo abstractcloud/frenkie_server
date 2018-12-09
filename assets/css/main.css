@@ -130,3 +130,54 @@ md-grid-tile {
 :focus {
     outline: 0;
 }
+
+.controll-wrapper {
+    position: relative;
+    margin-bottom: 250px;
+}
+
+.controll-wrapper > div {
+    position: absolute;
+}
+
+.btn-a {
+    top: 10px;
+    width: 60px;
+    left: 0;
+}
+
+.btn-u {
+    top: 10px;
+    width: 60px;
+    left: 60px;
+}
+
+.btn-m {
+    top: 10px;
+    width: 60px;
+    left: 120px;
+}
+
+.btn-l {
+    top: 70px;
+    width: 60px;
+    left: 0px;
+}
+
+.btn-s {
+    top: 70px;
+    width: 60px;
+    left: 60px;
+}
+
+.btn-r {
+    top: 70px;
+    width: 60px;
+    left: 120px;
+}
+
+.btn-d {
+    top: 130px;
+    width: 60px;
+    left: 60px;
+}
